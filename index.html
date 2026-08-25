@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <title>(주)오르카아이티 - 제조업 특화 Cloud ERP & 스마트공장 솔루션</title>
+  <meta name="description" content="글로벌 제조업 특화 ERP 솔루션인 QAD Adaptive ERP, QAD O³, 스마트공장, MMOG/LE 솔루션 구축 및 컨설팅 전문 기업 (주)오르카아이티입니다.">
+  <meta name="keywords" content="오르카아이티, OrcaIT, QAD ERP, QAD AERP, QAD O3, 스마트공장, 제조업 ERP, Cloud ERP, MMOG/LE, Progress, ERP 컨설팅">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="(주)오르카아이티 - 제조업 특화 Cloud ERP & 스마트공장">
+  <meta property="og:description" content="Building the Effective Enterprise - QAD ERP 파트너 (주)오르카아이티">
+  <meta property="og:url" content="https://orcait.net">
+
+  <!-- Pretendard Web Font -->
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- =========================================================================
+       Navigation Header
+       ========================================================================= -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="#hero" class="logo-link">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#00d2d3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M2 17L12 22L22 17" stroke="#0070f3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M2 12L12 17L22 12" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>오르카아이티</span>
+        <span class="logo-badge">QAD PARTNER</span>
+      </a>
+
+      <nav class="nav-menu">
+        <div class="nav-item">
+          <a href="#solutions" class="nav-link">
+            솔루션
+            <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </a>
+          <div class="dropdown-menu">
+            <a href="#solutions" class="dropdown-link" data-modal-target="aerp">QAD Adaptive ERP</a>
+            <a href="#solutions" class="dropdown-link" data-modal-target="o3">QAD ERP O³</a>
+            <a href="#smart-factory" class="dropdown-link" data-modal-target="smart_factory">스마트공장 (AS)</a>
+            <a href="#solutions" class="dropdown-link" data-modal-target="mmog">MMOG / LE</a>
+            <a href="#solutions" class="dropdown-link" data-modal-target="orcore">OrCore 솔루션</a>
+            <a href="#solutions" class="dropdown-link" data-modal-target="progress">Progress OpenEdge</a>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <a href="#services" class="nav-link">
+            서비스
+            <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </a>
+          <div class="dropdown-menu">
+            <a href="#services" class="dropdown-link" data-modal-target="consulting">컨설팅 서비스</a>
+            <a href="#services" class="dropdown-link" data-modal-target="outsourcing">아웃소싱 / 유지보수</a>
+            <a href="#services" class="dropdown-link" data-modal-target="cloud_svc">Cloud 인프라 서비스</a>
+            <a href="#services" class="dropdown-link" data-modal-target="education">맞춤형 교육 서비스</a>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <a href="#clients" class="nav-link">고객사</a>
+        </div>
+
+        <div class="nav-item">
+          <a href="#support" class="nav-link">
+            고객지원
+            <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </a>
+          <div class="dropdown-menu">
+            <a href="#support" class="dropdown-link">문의 / 방문 요청</a>
+            <a href="#support" class="dropdown-link">고객지원 안내</a>
+          </div>
+        </div>
+
+        <div class="nav-item">
+          <a href="#company" class="nav-link">회사소개</a>
+        </div>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#support" class="btn btn-primary btn-sm">온라인 문의하기</a>
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="메뉴 열기">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+  <aside class="mobile-drawer" id="mobileDrawer">
+    <ul class="mobile-nav-list">
+      <li class="mobile-nav-item">
+        <div class="mobile-nav-title">솔루션</div>
+        <div class="mobile-sub-list">
+          <a href="#solutions" data-modal-target="aerp">QAD Adaptive ERP</a>
+          <a href="#solutions" data-modal-target="o3">QAD ERP O³</a>
+          <a href="#smart-factory" data-modal-target="smart_factory">스마트공장 (Industry 4.0)</a>
+          <a href="#solutions" data-modal-target="mmog">MMOG/LE</a>
+          <a href="#solutions" data-modal-target="orcore">OrCore</a>
+          <a href="#solutions" data-modal-target="progress">Progress</a>
+        </div>
+      </li>
+      <li class="mobile-nav-item">
+        <div class="mobile-nav-title">서비스</div>
+        <div class="mobile-sub-list">
+          <a href="#services" data-modal-target="consulting">컨설팅 서비스</a>
+          <a href="#services" data-modal-target="outsourcing">아웃소싱 서비스</a>
+          <a href="#services" data-modal-target="cloud_svc">Cloud 인프라</a>
+          <a href="#services" data-modal-target="education">교육 서비스</a>
+        </div>
+      </li>
+      <li class="mobile-nav-item">
+        <div class="mobile-nav-title"><a href="#clients">고객사</a></div>
+      </li>
+      <li class="mobile-nav-item">
+        <div class="mobile-nav-title"><a href="#support">고객지원 & 문의</a></div>
+      </li>
+      <li class="mobile-nav-item">
+        <div class="mobile-nav-title"><a href="#company">회사소개</a></div>
+      </li>
+    </ul>
+    <div style="margin-top: 30px;">
+      <a href="#support" class="btn btn-primary" style="width: 100%;">문의/방문 요청</a>
+    </div>
+  </aside>
+
+  <!-- =========================================================================
+       Hero Section (Slider Banner)
+       ========================================================================= -->
+  <section class="hero-section" id="hero">
+    <div class="slider-wrapper">
+      <!-- Slide 1 -->
+      <div class="slide-item active">
+        <div class="slide-overlay"></div>
+      </div>
+      <!-- Slide 2 -->
+      <div class="slide-item">
+        <div class="slide-overlay"></div>
+      </div>
+      <!-- Slide 3 -->
+      <div class="slide-item">
+        <div class="slide-overlay"></div>
+      </div>
+    </div>
+
+    <div class="container hero-content">
+      <div class="hero-partner-badge">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#00d2d3" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        <span>Global Leading QAD ERP Partner</span>
+      </div>
+      <h1 class="hero-title">
+        Building the <br>
+        <span class="highlight">Effective Enterprise</span>
+      </h1>
+      <p class="hero-description">
+        제조업에 필요한 모든 기능을 갖춘 차세대 Cloud ERP와 스마트공장 자동화 솔루션을 통해 예측 불가능한 시장 환경에서 지속 가능한 성장을 지원합니다.
+      </p>
+      <div class="hero-actions">
+        <a href="#solutions" class="btn btn-primary">솔루션 둘러보기</a>
+        <a href="#support" class="btn btn-outline-white">무료 컨설팅 문의</a>
+      </div>
+    </div>
+
+    <!-- Slider Navigation Controls -->
+    <div class="slider-controls">
+      <button class="slider-btn" id="sliderPrev" aria-label="이전 슬라이드">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+      </button>
+      <div class="slider-dots">
+        <span class="slider-dot active"></span>
+        <span class="slider-dot"></span>
+        <span class="slider-dot"></span>
+      </div>
+      <button class="slider-btn" id="sliderNext" aria-label="다음 슬라이드">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </button>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       Solutions Section
+       ========================================================================= -->
+  <section class="solutions-section" id="solutions">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Solutions</span>
+        <h2>제조업에 최적화된 <span class="highlight">차세대 Cloud ERP</span></h2>
+        <p>하드웨어 관리 부담 없는 No Hardware, No Hassle 환경에서 글로벌 제조업의 민첩성과 수익성을 극대화합니다.</p>
+      </div>
+
+      <!-- Main Solutions: AERP & O3 -->
+      <div class="solution-hero-grid">
+        <!-- QAD AERP -->
+        <div class="solution-card-primary">
+          <div>
+            <div class="card-top">
+              <span class="brand-tag">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0070f3" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/></svg>
+                QAD Adaptive ERP
+              </span>
+              <span class="brand-badge-pill">Cloud Native</span>
+            </div>
+            <h3>QAD AERP</h3>
+            <p>
+              변화하는 시장 요구와 공급망 불확실성에 신속히 대응할 수 있도록 설계된 차세대 Cloud Native ERP 솔루션입니다. 직관적인 Adaptive UX와 표준 제조 프로세스를 제공합니다.
+            </p>
+            <div class="feature-pill-list">
+              <span class="feature-pill">클라우드 네이티브</span>
+              <span class="feature-pill">Adaptive UX</span>
+              <span class="feature-pill">글로벌 멀티사이트</span>
+              <span class="feature-pill">신속한 기능 업데이트</span>
+            </div>
+          </div>
+          <a href="#" class="btn btn-secondary" data-modal-target="aerp">자세히 보기 →</a>
+        </div>
+
+        <!-- QAD O3 -->
+        <div class="solution-card-primary">
+          <div>
+            <div class="card-top">
+              <span class="brand-tag">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00d2d3" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/></svg>
+                QAD ERP O³
+              </span>
+              <span class="brand-badge-pill">AWS Powered</span>
+            </div>
+            <h3>QAD ERP O³</h3>
+            <p>
+              AWS 기반의 최신 아키텍처와 노코드/로우코드(No-Code/Low-Code) 플랫폼 확장을 통해 핵심 코드 수정 없이 운영 효율성과 커스터마이징 생산성을 극대화합니다.
+            </p>
+            <div class="feature-pill-list">
+              <span class="feature-pill">AWS 클라우드</span>
+              <span class="feature-pill">노코드 / 로우코드</span>
+              <span class="feature-pill">하이브리드 지원</span>
+              <span class="feature-pill">확장형 플랫폼</span>
+            </div>
+          </div>
+          <a href="#" class="btn btn-secondary" data-modal-target="o3">자세히 보기 →</a>
+        </div>
+      </div>
+
+      <!-- Extended Solution Grid -->
+      <div class="solution-secondary-grid">
+        <!-- Smart Factory -->
+        <div class="solution-card-compact">
+          <div class="card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <h4>스마트공장 (AS)</h4>
+          <p>바코드·RFID 및 현장 단말기를 ERP와 직결하여 실시간 생산/물류 데이터를 수집합니다.</p>
+          <a href="#" class="card-link-btn" data-modal-target="smart_factory">상세보기 →</a>
+        </div>
+
+        <!-- MMOG/LE -->
+        <div class="solution-card-compact">
+          <div class="card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h4>MMOG / LE</h4>
+          <p>글로벌 자동차 완성차(OEM) 물류 공급망 평가 표준을 완벽 준수하도록 지원합니다.</p>
+          <a href="#" class="card-link-btn" data-modal-target="mmog">상세보기 →</a>
+        </div>
+
+        <!-- OrCore -->
+        <div class="solution-card-compact">
+          <div class="card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          </div>
+          <h4>OrCore 솔루션</h4>
+          <p>오르카아이티 고유의 한국형 업무 환경 연동 및 커스텀 확장 프레임워크입니다.</p>
+          <a href="#" class="card-link-btn" data-modal-target="orcore">상세보기 →</a>
+        </div>
+
+        <!-- Progress -->
+        <div class="solution-card-compact">
+          <div class="card-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+          </div>
+          <h4>Progress OpenEdge</h4>
+          <p>QAD의 기반 RDBMS로 무결점 고성능 트랜잭션과 안정성을 보장합니다.</p>
+          <a href="#" class="card-link-btn" data-modal-target="progress">상세보기 →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       Smart Factory / Industry 4.0 Section
+       ========================================================================= -->
+  <section class="smart-factory-section" id="smart-factory">
+    <div class="container">
+      <div class="smart-factory-grid">
+        <div class="smart-factory-info">
+          <span class="section-badge badge-white">Industry 4.0</span>
+          <h3>스마트공장을 실현하는 <br><span class="highlight">QAD 자동화 솔루션 (AS)</span></h3>
+          <p class="lead-text">
+            제조 공정 현장과 ERP 데이터 간의 단절을 없애고, 바코드·RFID·모바일 단말기를 통해 생산 실적 및 물류 흐름을 100% 실시간 동기화합니다.
+          </p>
+
+          <div class="smart-feature-list">
+            <div class="smart-feature-item">
+              <div class="feature-check-icon">✓</div>
+              <div>
+                <h5>실시간 재공(WIP) 및 입출고 자동화</h5>
+                <p>생산 지시, 자재 불출, 공정 이동, 완제품 입고를 무선 PDA로 즉시 처리</p>
+              </div>
+            </div>
+
+            <div class="smart-feature-item">
+              <div class="feature-check-icon">✓</div>
+              <div>
+                <h5>휴먼 에러 방지 및 추적성(Traceability) 확보</h5>
+                <p>로트(Lot) 번호 및 시리얼 단위 정밀 추적으로 품질 불량 및 오투입 사전 차단</p>
+              </div>
+            </div>
+
+            <div class="smart-feature-item">
+              <div class="feature-check-icon">✓</div>
+              <div>
+                <h5>멀티 디바이스 반응형 환경 지원</h5>
+                <p>PC 대시보드, 현장 태블릿, 모바일 바코드 리더기를 일체형으로 연계 지원</p>
+              </div>
+            </div>
+          </div>
+
+          <a href="#support" class="btn btn-primary" data-modal-target="smart_factory">스마트공장 도입 문의하기</a>
+        </div>
+
+        <!-- Visual Dashboard Mockup -->
+        <div class="smart-dashboard-mockup">
+          <div class="mockup-header">
+            <div class="mockup-dots">
+              <span class="mockup-dot red"></span>
+              <span class="mockup-dot yellow"></span>
+              <span class="mockup-dot green"></span>
+            </div>
+            <span class="mockup-badge">● LIVE REAL-TIME FACTORY MONITOR</span>
+          </div>
+
+          <div class="mockup-screen-grid">
+            <div class="mockup-card">
+              <div class="mockup-card-title">오늘의 생산 달성률</div>
+              <div class="mockup-card-value">98.4%</div>
+              <div class="mockup-card-sub">▲ 3.2% vs 전일</div>
+            </div>
+            <div class="mockup-card">
+              <div class="mockup-card-title">종합설비효율 (OEE)</div>
+              <div class="mockup-card-value">91.8%</div>
+              <div class="mockup-card-sub">▲ 1.5% 목표 초과</div>
+            </div>
+
+            <div class="mockup-chart-placeholder">
+              <svg width="100%" height="80" viewBox="0 0 300 80" fill="none">
+                <path d="M0 60 Q 50 20, 100 40 T 200 15 T 300 30" stroke="#00d2d3" stroke-width="3" fill="none"/>
+                <path d="M0 60 Q 50 20, 100 40 T 200 15 T 300 30 L 300 80 L 0 80 Z" fill="rgba(0, 210, 211, 0.1)"/>
+              </svg>
+              <span style="font-size: 0.85rem; color: #94a3b8;">라인별 실시간 생산 가동 현황 그래프</span>
+            </div>
+          </div>
+
+          <div class="device-indicator-pills">
+            <span class="device-pill">💻 데스크톱 PC</span>
+            <span class="device-pill">📱 태블릿 GUI</span>
+            <span class="device-pill">📟 무선 PDA 스캐너</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       Services Section
+       ========================================================================= -->
+  <section class="services-section" id="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Services</span>
+        <h2>성공적인 ERP 운영을 위한 <span class="highlight">토털 전문 서비스</span></h2>
+        <p>기획 컨설팅부터 시스템 구축, 클라우드 이전, 전문 운영 아웃소싱 및 실무 교육까지 전 과정을 책임집니다.</p>
+      </div>
+
+      <div class="services-grid">
+        <!-- 1. 컨설팅 -->
+        <div class="service-box">
+          <div class="service-number">01</div>
+          <h4>컨설팅 서비스</h4>
+          <p>20년 이상의 구축 경험을 갖춘 전문 컨설턴트가 제조 현장 진단 및 글로벌 베스트 프랙티스를 적용합니다.</p>
+          <div class="service-points">
+            <span class="service-point-item">업무 프로세스 혁신 (PI)</span>
+            <span class="service-point-item">단계별 ERP 구축 로드맵</span>
+            <span class="service-point-item">표준 마스터 데이터 정립</span>
+          </div>
+          <div style="margin-top: 24px;">
+            <a href="#" class="card-link-btn" data-modal-target="consulting">자세히 보기 →</a>
+          </div>
+        </div>
+
+        <!-- 2. 아웃소싱 -->
+        <div class="service-box">
+          <div class="service-number">02</div>
+          <h4>아웃소싱 서비스</h4>
+          <p>시스템 운영 및 유지보수를 전담하여 고객사의 IT 관리 비용을 절감하고 비즈니스 안정성을 보장합니다.</p>
+          <div class="service-points">
+            <span class="service-point-item">SLA 기반 신속 헬프데스크</span>
+            <span class="service-point-item">정기 시스템 헬스체크</span>
+            <span class="service-point-item">긴급 장애 복구 온사이트 지원</span>
+          </div>
+          <div style="margin-top: 24px;">
+            <a href="#" class="card-link-btn" data-modal-target="outsourcing">자세히 보기 →</a>
+          </div>
+        </div>
+
+        <!-- 3. Cloud 서비스 -->
+        <div class="service-box">
+          <div class="service-number">03</div>
+          <h4>Cloud 인프라</h4>
+          <p>On-Premise 환경의 ERP를 안전하게 AWS/QAD Cloud로 마이그레이션하여 관리 부담을 해소합니다.</p>
+          <div class="service-points">
+            <span class="service-point-item">무중단 데이터 이전 전략</span>
+            <span class="service-point-item">글로벌 보안 컴플라이언스</span>
+            <span class="service-point-item">오토스케일링 & TCO 절감</span>
+          </div>
+          <div style="margin-top: 24px;">
+            <a href="#" class="card-link-btn" data-modal-target="cloud_svc">자세히 보기 →</a>
+          </div>
+        </div>
+
+        <!-- 4. 교육 서비스 -->
+        <div class="service-box">
+          <div class="service-number">04</div>
+          <h4>맞춤 교육 서비스</h4>
+          <p>실무자와 시스템 관리자가 시스템을 능동적으로 활용할 수 있도록 모듈별 실습 중심 교육을 제공합니다.</p>
+          <div class="service-points">
+            <span class="service-point-item">모듈별 실무 실습 코스</span>
+            <span class="service-point-item">시스템 관리자 심화 과정</span>
+            <span class="service-point-item">사내 출장 & 전용 교육장</span>
+          </div>
+          <div style="margin-top: 24px;">
+            <a href="#" class="card-link-btn" data-modal-target="education">자세히 보기 →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       Clients & References Section
+       ========================================================================= -->
+  <section class="clients-section" id="clients">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">References</span>
+        <h2>국내외 선도 제조기업이 <span class="highlight">신뢰하는 파트너</span></h2>
+        <p>자동차 부품, 전기·전자, 방산 및 일반 제조 등 다양한 산업군에서 검증된 성공 레퍼런스를 보유하고 있습니다.</p>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="client-filter-tabs">
+        <button class="filter-tab-btn active" data-filter="all">전체 고객사</button>
+        <button class="filter-tab-btn" data-filter="auto">자동차 산업</button>
+        <button class="filter-tab-btn" data-filter="elec">전기·전자 / 소비재</button>
+        <button class="filter-tab-btn" data-filter="general">일반제조 / 방산</button>
+      </div>
+
+      <!-- Logos Grid -->
+      <div class="clients-grid">
+        <!-- Auto Industry -->
+        <div class="client-logo-card" data-category="auto">
+          <span class="client-name">한온시스템</span>
+          <span class="client-category">자동차 열관리 시스템</span>
+        </div>
+        <div class="client-logo-card" data-category="auto">
+          <span class="client-name">리어 (Lear)</span>
+          <span class="client-category">자동차 시트 & 전장</span>
+        </div>
+        <div class="client-logo-card" data-category="auto">
+          <span class="client-name">서진오토모티브</span>
+          <span class="client-category">구동계 부품</span>
+        </div>
+        <div class="client-logo-card" data-category="auto">
+          <span class="client-name">모토닉</span>
+          <span class="client-category">엔진 및 연료장치</span>
+        </div>
+        <div class="client-logo-card" data-category="auto">
+          <span class="client-name">포스코모빌리티</span>
+          <span class="client-category">친환경차 부품</span>
+        </div>
+        <div class="client-logo-card" data-category="auto">
+          <span class="client-name">델코 (Delkor)</span>
+          <span class="client-category">자동차용 배터리</span>
+        </div>
+        <div class="client-logo-card" data-category="auto">
+          <span class="client-name">이튼 (Eaton)</span>
+          <span class="client-category">파워트레인 솔루션</span>
+        </div>
+        <div class="client-logo-card" data-category="auto">
+          <span class="client-name">삼기오토모티브</span>
+          <span class="client-category">알루미늄 다이캐스팅</span>
+        </div>
+        <div class="client-logo-card" data-category="auto">
+          <span class="client-name">세원전자</span>
+          <span class="client-category">차량용 전장부품</span>
+        </div>
+        <div class="client-logo-card" data-category="auto">
+          <span class="client-name">핸즈코퍼레이션</span>
+          <span class="client-category">알루미늄 휠</span>
+        </div>
+        <div class="client-logo-card" data-category="auto">
+          <span class="client-name">쿠퍼스탠다드</span>
+          <span class="client-category">실링 & 플루이드</span>
+        </div>
+        <div class="client-logo-card" data-category="auto">
+          <span class="client-name">보림 (Bolim)</span>
+          <span class="client-category">자동차 내외장재</span>
+        </div>
+
+        <!-- Electronics & Consumer -->
+        <div class="client-logo-card" data-category="elec">
+          <span class="client-name">현대엘리베이터</span>
+          <span class="client-category">승강기 솔루션</span>
+        </div>
+        <div class="client-logo-card" data-category="elec">
+          <span class="client-name">RS오토메이션</span>
+          <span class="client-category">모션제어 & 로봇자동화</span>
+        </div>
+        <div class="client-logo-card" data-category="elec">
+          <span class="client-name">파라텍</span>
+          <span class="client-category">소방 방재 설비</span>
+        </div>
+        <div class="client-logo-card" data-category="elec">
+          <span class="client-name">PJ전자</span>
+          <span class="client-category">의료기기 & 전자부품</span>
+        </div>
+        <div class="client-logo-card" data-category="elec">
+          <span class="client-name">에이버리데니슨</span>
+          <span class="client-category">라벨 및 패키징 솔루션</span>
+        </div>
+        <div class="client-logo-card" data-category="elec">
+          <span class="client-name">콤텍시스템</span>
+          <span class="client-category">IT 네트워크 인프라</span>
+        </div>
+
+        <!-- General & Defense -->
+        <div class="client-logo-card" data-category="general">
+          <span class="client-name">LIG넥스원</span>
+          <span class="client-category">종합방위산업체</span>
+        </div>
+        <div class="client-logo-card" data-category="general">
+          <span class="client-name">코어스텍 (CoorsTek)</span>
+          <span class="client-category">첨단 세라믹 부품</span>
+        </div>
+        <div class="client-logo-card" data-category="general">
+          <span class="client-name">에머슨프로세스</span>
+          <span class="client-category">프로세스 자동화 제어</span>
+        </div>
+        <div class="client-logo-card" data-category="general">
+          <span class="client-name">인젠트</span>
+          <span class="client-category">금융 & 데이터 솔루션</span>
+        </div>
+        <div class="client-logo-card" data-category="general">
+          <span class="client-name">발렉스 (Valex)</span>
+          <span class="client-category">초고순도 밸브 및 튜빙</span>
+        </div>
+        <div class="client-logo-card" data-category="general">
+          <span class="client-name">레어달메디컬</span>
+          <span class="client-category">응급의료 교육 장비</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       Customer Support & Inquiry Form Section
+       ========================================================================= -->
+  <section class="support-section" id="support">
+    <div class="container">
+      <div class="support-grid">
+        <!-- Contact Info -->
+        <div class="support-info">
+          <span class="section-badge">Get in Touch</span>
+          <h3>제조업 혁신의 파트너, <br><span class="highlight">오르카아이티가 함께합니다</span></h3>
+          <p>
+            QAD Cloud ERP 도입, 스마트공장 구축, 기존 ERP 전환 및 시스템 유지보수에 대한 모든 궁금증을 전문 컨설턴트가 성심껏 상담해 드립니다.
+          </p>
+
+          <div class="contact-info-cards">
+            <div class="contact-info-card">
+              <div class="contact-card-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div class="contact-card-text">
+                <h5>본사 주소</h5>
+                <p>경기도 과천시 뒷골로 26 그레이스 1층 (과천동 371-1)</p>
+              </div>
+            </div>
+
+            <div class="contact-info-card">
+              <div class="contact-card-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div class="contact-card-text">
+                <h5>대표 전화 / 팩스</h5>
+                <p>TEL: 02-572-4720 &nbsp;|&nbsp; FAX: 02-572-4739</p>
+              </div>
+            </div>
+
+            <div class="contact-info-card">
+              <div class="contact-card-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div class="contact-card-text">
+                <h5>이메일 문의</h5>
+                <p>contact@orcait.net</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Inquiry Form -->
+        <div class="support-form-wrapper">
+          <form class="inquiry-form" id="inquiryForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="formCompany">회사명 *</label>
+                <input type="text" id="formCompany" class="form-control" placeholder="예: (주)한국제조" required>
+              </div>
+              <div class="form-group">
+                <label for="formName">담당자명 / 직급 *</label>
+                <input type="text" id="formName" class="form-control" placeholder="예: 홍길동 팀장" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="formEmail">이메일 *</label>
+                <input type="email" id="formEmail" class="form-control" placeholder="example@company.com" required>
+              </div>
+              <div class="form-group">
+                <label for="formPhone">연락처</label>
+                <input type="tel" id="formPhone" class="form-control" placeholder="010-0000-0000">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="formType">문의 유형 *</label>
+              <select id="formType" class="form-control">
+                <option value="QAD Adaptive ERP 도입 문의">QAD Adaptive ERP 도입 문의</option>
+                <option value="QAD ERP O³ 클라우드 문의">QAD ERP O³ 클라우드 문의</option>
+                <option value="스마트공장 (AS) 솔루션 상담">스마트공장 (AS) 솔루션 상담</option>
+                <option value="MMOG/LE 진단 및 컨설팅">MMOG/LE 진단 및 컨설팅</option>
+                <option value="ERP 아웃소싱 / 유지보수 요청">ERP 아웃소싱 / 유지보수 요청</option>
+                <option value="교육 신청 및 기타 문의">교육 신청 및 기타 문의</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="formMessage">상세 문의 내용 *</label>
+              <textarea id="formMessage" class="form-control" placeholder="도입 희망 시기, 현재 운영 중인 시스템, 주요 요구사항 등을 자유롭게 작성해 주세요." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 14px;">문의 및 방문 요청 보내기</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       Footer & Company Overview
+       ========================================================================= -->
+  <footer class="footer" id="company">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h4>(주)오르카아이티</h4>
+          <p>
+            오르카아이티는 제조 기업의 비즈니스 민첩성과 가치를 높이는 글로벌 ERP 솔루션 전문 기업입니다. 2003년 설립 이래 축적된 산업별 전문성을 바탕으로 최고의 디지털 전환 파트너가 되어 드립니다.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h5>솔루션</h5>
+          <div class="footer-links">
+            <a href="#solutions" data-modal-target="aerp">QAD Adaptive ERP</a>
+            <a href="#solutions" data-modal-target="o3">QAD ERP O³</a>
+            <a href="#smart-factory" data-modal-target="smart_factory">스마트공장 (AS)</a>
+            <a href="#solutions" data-modal-target="mmog">MMOG/LE</a>
+            <a href="#solutions" data-modal-target="orcore">OrCore</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5>서비스</h5>
+          <div class="footer-links">
+            <a href="#services" data-modal-target="consulting">컨설팅 서비스</a>
+            <a href="#services" data-modal-target="outsourcing">아웃소싱 서비스</a>
+            <a href="#services" data-modal-target="cloud_svc">Cloud 서비스</a>
+            <a href="#services" data-modal-target="education">교육 서비스</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5>고객지원</h5>
+          <div class="footer-links">
+            <a href="#support">문의 / 방문 요청</a>
+            <a href="#clients">고객사 레퍼런스</a>
+            <a href="#hero">상단으로 가기</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="company-meta">
+          (주)오르카아이티 &nbsp;|&nbsp; 대표자 : 김승조 &nbsp;|&nbsp; 사업자등록번호: 107-86-35726<br>
+          (13814) 경기도 과천시 뒷골로 26 그레이스 1층(과천동 371-1) &nbsp;|&nbsp; TEL: 02-572-4720 &nbsp;|&nbsp; FAX: 02-572-4739
+        </div>
+        <div>
+          Copyright © 2003 OrcaIT Co., Ltd. All Rights Reserved.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       Detail Info Modal Dialog
+       ========================================================================= -->
+  <div class="modal-backdrop" id="infoModal">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="닫기">✕</button>
+      <div class="modal-body">
+        <h3 id="modalTitle">솔루션 상세 정보</h3>
+        <div class="modal-subtitle" id="modalSubtitle">솔루션 부제목</div>
+        <p id="modalDesc">솔루션에 대한 상세 설명이 표시됩니다.</p>
+        <div class="modal-highlights">
+          <h5>주요 특장점</h5>
+          <ul id="modalHighlightsList">
+            <!-- Dynamic elements -->
+          </ul>
+        </div>
+        <a href="#support" class="btn btn-primary" onclick="document.getElementById('infoModal').classList.remove('active'); document.body.style.overflow='';" style="width: 100%;">이 솔루션 도입 문의하기</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll To Top Button -->
+  <button class="scroll-top-btn" aria-label="맨 위로 가기">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
+
+  <!-- Script -->
+  <script src="js/main.js"></script>
+</body>
+</html>
